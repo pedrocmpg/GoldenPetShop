@@ -6,6 +6,7 @@ import { motion, useReducedMotion as useMotionReducedMotion } from "motion/react
 export function PhotoPlaceholder({
   alt,
   src,
+  objectPosition = "center",
   className,
   style,
   delay = 0,
@@ -14,6 +15,7 @@ export function PhotoPlaceholder({
 }: {
   alt: string;
   src?: string;
+  objectPosition?: string;
   className?: string;
   style?: React.CSSProperties;
   delay?: number;
@@ -71,6 +73,7 @@ export function PhotoPlaceholder({
             width: "100%",
             height: "100%",
             objectFit: "cover",
+            objectPosition,
           }}
           {...zoomProps}
           transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay }}

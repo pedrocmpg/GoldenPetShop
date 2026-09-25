@@ -92,17 +92,17 @@ export const petGallery = [
 export const testimonials = [
   {
     quote:
-      "[Depoimento de cliente a confirmar — trecho de avaliação real do Google]",
+      "[Depoimento de cliente a confirmar]",
     author: "[Nome do cliente]",
   },
   {
     quote:
-      "[Depoimento de cliente a confirmar — trecho de avaliação real do Google]",
+      "[Depoimento de cliente a confirmar]",
     author: "[Nome do cliente]",
   },
   {
     quote:
-      "[Depoimento de cliente a confirmar — trecho de avaliação real do Google]",
+      "[Depoimento de cliente a confirmar]",
     author: "[Nome do cliente]",
   },
 ];
