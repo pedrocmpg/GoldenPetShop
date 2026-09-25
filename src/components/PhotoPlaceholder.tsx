@@ -52,12 +52,24 @@ export function PhotoPlaceholder({
         borderRadius: "var(--radius-card)",
         aspectRatio,
         background: "var(--color-bg-alt)",
-        border: "1.5px dashed var(--color-text-secondary)",
+        border: "1.5px dashed rgba(92, 74, 59, 0.45)",
+        boxShadow: "0 24px 48px -20px rgba(43, 29, 20, 0.28)",
         ...style,
       }}
       {...curtainProps}
       transition={{ duration: 0.9, ease: [0.65, 0, 0.35, 1], delay }}
     >
+      <div
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundImage:
+            "radial-gradient(rgba(92,74,59,0.16) 1.4px, transparent 1.4px)",
+          backgroundSize: "16px 16px",
+          opacity: 0.5,
+        }}
+      />
       <motion.div
         style={{
           position: "absolute",
