@@ -75,7 +75,7 @@ export const services = [
   },
   {
     title: "[OUTRO SERVIÇO]",
-    description: "[Descrição do serviço a confirmar com o dono do Golden Pet Shop]",
+    description: "[Descrição do serviço a confirmar]",
     isPlaceholder: true,
   },
 ];
