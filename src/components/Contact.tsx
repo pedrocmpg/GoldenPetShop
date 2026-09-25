@@ -67,7 +67,16 @@ export function Contact() {
           </Reveal>
 
           <Reveal direction="right">
-            <div className="contact-map card card--placeholder">{business.mapEmbedUrl}</div>
+            <div className="contact-map card">
+              <iframe
+                title={`Mapa: ${business.address}`}
+                src={business.mapEmbedUrl}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                style={{ border: 0, width: "100%", height: "100%" }}
+                allowFullScreen
+              />
+            </div>
           </Reveal>
         </div>
       </div>
@@ -98,13 +107,7 @@ export function Contact() {
         .contact-map {
           overflow: hidden;
           aspect-ratio: 4 / 3;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          color: var(--color-text-secondary);
-          font-weight: 600;
-          padding: 16px;
-          text-align: center;
+          padding: 0;
         }
         @media (max-width: 800px) {
           .contact-grid {
