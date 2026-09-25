@@ -176,7 +176,7 @@ export function Hero() {
             animate={prefersReduced ? undefined : { opacity: 1, scale: 1 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
           >
-            <PhotoPlaceholder alt={hero.imageAlt} aspectRatio="1 / 1" animateOnMount delay={0.3} />
+            <PhotoPlaceholder src={hero.image} alt={hero.imageAlt} aspectRatio="1 / 1" animateOnMount delay={0.3} />
 
             <motion.div
               className="hero-sticker"

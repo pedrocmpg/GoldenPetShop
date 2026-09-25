@@ -13,15 +13,13 @@ export function PetGallery() {
         <RevealGroup className="pet-gallery-grid">
           {petGallery.map((pet, i) => (
             <Reveal
-              key={pet.alt}
+              key={pet.src}
               direction={i % 2 === 0 ? "left" : "right"}
               delay={i * 0.08}
               className="pet-gallery-item"
             >
               <div className="pet-photo-card card card--hoverable">
-                <div className="pet-photo-inner" aria-label={pet.alt} role="img">
-                  <span>{pet.alt}</span>
-                </div>
+                <img className="pet-photo-inner" src={pet.src} alt={pet.alt} loading="lazy" />
               </div>
             </Reveal>
           ))}
@@ -51,16 +49,8 @@ export function PetGallery() {
         .pet-photo-inner {
           width: 100%;
           height: 100%;
-          background: var(--color-bg-alt);
-          border: 1.5px dashed rgba(92, 74, 59, 0.45);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          text-align: center;
-          padding: 12px;
-          color: var(--color-text-secondary);
-          font-size: 13px;
-          font-weight: 600;
+          object-fit: cover;
+          display: block;
           transition: transform 0.5s var(--ease-enter);
           border-radius: var(--radius-card-sm);
         }
